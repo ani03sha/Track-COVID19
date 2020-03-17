@@ -17,7 +17,6 @@ class App extends Component {
 		totalSeriousCases: undefined,
 		countryNewsItems: {},
 		error: null
-
 	}
 
 	getCountryData = async (e) => {
@@ -53,7 +52,7 @@ class App extends Component {
 			<div>
 				<SearchForm getCountryData={this.getCountryData} />
 				{
-					this.state.error !== null ? <div style={{ color: "#fff", textAlign:"center" }}>
+					this.state.error !== null ? <div style={{ color: "#000", textAlign:"center" }}>
 						{this.state.error}
 					</div> :
 					<ShowData countryName = { this.state.countryName }
