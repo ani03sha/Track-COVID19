@@ -1,27 +1,58 @@
 .articleList__container {
-    border-radius: 20px;
-    box-shadow: -1px 2px 34px -13px rgba(0, 0, 0, 0.55);
-    text-align: left;
-    overflow: hidden;
+  border-radius: 20px;
+  box-shadow: -1px 2px 34px -13px rgba(0, 0, 0, 0.55);
+  text-align: left;
+  overflow: hidden;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
 }
 
 .articleList__image {
-    width: 100%;
-    height: 200px;
+  width: 100%;
+  height: 200px;
 }
 
-.article__details {
-    background: #34495e;
+.articleList__title {
+  color: grey;
+  font-size: 18px;
 }
 
-.article__details h5 {
-    background-color: black;
+.articleList__time {
+  color: black;
+  font-size: 12px;
 }
 
-.article__details button {
-    width: 100%;
-    border: 0;
-    background-color: #2c3e50;
-    color: #fff;
-    height: 20px;
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+th, td {
+    color: white;
+    text-align: center;
 }

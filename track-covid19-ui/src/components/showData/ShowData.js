@@ -13,34 +13,48 @@ const ShowData = (props) => {
         }
     });
     return(
-        <div className="container">
-            Country: {props.countryName} <br />
-            Total Cases: {props.totalCases} <br />
-            Recovered: {props.totalRecovered} <br />
-            Unresolved: {props.totalUnResolved} <br />
-            Deaths: {props.totalDeaths} <br />
-            Deaths Today: {props.totalNewDeathsToday} <br />
-            New Cases Today: {props.totalNewCasesToday} <br />
-            Active Cases: {props.totalActiveCases} <br />
-            Serious Cases: {props.totalSeriousCases} <br />
+        <div>
+            <div class="table-responsive">
+                <table class = "table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Country</th>
+                            <th scope="col">Total Cases</th>
+                            <th scope="col">Recovered</th>
+                            <th scope="col">Unresolved</th>
+                            <th scope="col">Deaths</th>
+                            <th scope="col">Deaths Today</th>
+                            <th scope="col">New Cases Today</th>
+                            <th scope="col">Active Cases</th>
+                            <th scope="col">Serious Cases</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{props.countryName}</td>
+                            <td>{props.totalCases}</td>
+                            <td>{props.totalRecovered}</td>
+                            <td>{props.totalUnResolved}</td>
+                            <td>{props.totalDeaths}</td>
+                            <td>{props.totalNewDeathsToday}</td>
+                            <td>{props.totalNewCasesToday}</td>
+                            <td>{props.totalActiveCases}</td>
+                            <td>{props.totalSeriousCases}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div className="row">
                 { jsonArray.map((item) => {
                     return(
                         <div className="col-md-4" style={{ marginBottom: "2rem" }}>
-                            <div className="articleList__container">
+                            <div className="card">
                                 <img className="articleList__image" src={item.image} alt={item.title} />
+                                <p className="articleList__title">{item.title}</p>
+                                <p className="articleList__time">{item.time}</p>
+                                <a href={item.url} target="_blank"><button>Read More..</button></a>
                             </div>
-                            <div className="article__details">                            
-                                <h5 className="article__title">
-                                    {item.title}
-                                </h5>
-                                <Link  to={{
-                                    pathname: `/article/${item.newsid}`,
-                                    state: { item }
-                                }}>
-                                    <button>Read More...</button>
-                                </Link>
-                            </div>
+                            
                         </div>
                         );
                     })
@@ -51,3 +65,12 @@ const ShowData = (props) => {
 }
 
 export default ShowData;
+
+
+/**
+ * <div className="article__details">                            
+                                <a href={item.url} target="_blank">
+                                    {item.title}
+                                </a>
+                            </div>
+ */
