@@ -1,8 +1,7 @@
 import React from 'react';
 import './ShowData.css';
-import { Link } from 'react-router-dom';
 
-const ShowData = (props) => {
+const ShowData = props => {
     const json = props.countryNewsItems;
     let jsonArray = [];
     Object.keys(json).sort().reverse().forEach(function(key) {

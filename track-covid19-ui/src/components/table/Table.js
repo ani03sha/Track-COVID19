@@ -1,7 +1,21 @@
 import React from 'react';
 import './Table.css'
 
-const Table = (props) => {
+const Table = props => {
+
+    // Object destructuring
+    const { 
+        countryName, 
+        totalCases, 
+        totalRecovered, 
+        totalUnResolved, 
+        totalDeaths, 
+        totalNewDeathsToday, 
+        totalNewCasesToday, 
+        totalActiveCases, 
+        totalSeriousCases
+    } = props;
+
     return(
         <div className="table-responsive">
                 <table className = "table table-hover table-bordered table-striped">
@@ -20,15 +34,15 @@ const Table = (props) => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{props.countryName}</td>
-                            <td>{props.totalCases}</td>
-                            <td>{props.totalRecovered}</td>
-                            <td>{props.totalUnResolved}</td>
-                            <td>{props.totalDeaths}</td>
-                            <td>{props.totalNewDeathsToday}</td>
-                            <td>{props.totalNewCasesToday}</td>
-                            <td>{props.totalActiveCases}</td>
-                            <td>{props.totalSeriousCases}</td>
+                            <td>{countryName}</td>
+                            <td>{totalCases}</td>
+                            <td>{totalRecovered}</td>
+                            <td>{totalUnResolved}</td>
+                            <td>{totalDeaths}</td>
+                            <td>{totalNewDeathsToday}</td>
+                            <td>{totalNewCasesToday}</td>
+                            <td>{totalActiveCases}</td>
+                            <td>{totalSeriousCases}</td>
                         </tr>
                     </tbody>
                 </table>
