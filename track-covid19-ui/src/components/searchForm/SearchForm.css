@@ -5,6 +5,11 @@
     position: relative;
 }
 
+.search h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .search__form input {
     margin: 0 auto;
     background-color: transparent;

@@ -51,8 +51,3 @@ button:hover,
 a:hover {
   opacity: 0.7;
 }
-
-th, td {
-    color: white;
-    text-align: center;
-}
