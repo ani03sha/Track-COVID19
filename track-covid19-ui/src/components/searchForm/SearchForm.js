@@ -7,8 +7,8 @@ const SearchForm = ({ getCountryData }) => {
             <h1>Track CoronaVirus</h1>
             <div onSubmit={ getCountryData } className="search">
                 <form className = "search__form">
-                    <input type="text" autoComplete="off" name="countryName" placeholder="Enter country name, e.g. India" />
-                    <button>Track</button>
+                    <input type="text" autoComplete="off" name="countryName" placeholder="Country"/>
+                    <button className="btn btn-primary btn-block">Track</button>
                 </form>
             </div>
         </div>

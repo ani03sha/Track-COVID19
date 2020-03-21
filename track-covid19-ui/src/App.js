@@ -83,6 +83,7 @@ class App extends Component {
 			<div>
 				<SearchForm getCountryData={this.getCountryData} />
 				{Object.keys(this.state.countryNewsItems).length !== 0 && this.state.countryNewsItems.constructor === Object ? 
+				<div>
 				<Table 
 				 	countryName = { this.state.countryName }
 					totalCases = { this.state.totalCases } 
@@ -93,7 +94,9 @@ class App extends Component {
 					totalNewCasesToday = { this.state.totalNewCasesToday }
 					totalActiveCases = { this.state.totalActiveCases }
 					totalSeriousCases = { this.state.totalSeriousCases }
-				/> : <div></div>
+				/>
+				<h3 style={{textAlign: "center", padding: "20px"}}>Related Articles</h3> 
+				</div>: <div></div>
 			}
 				{
 				this.state.error !== null ? <div style={{ color: "#fff", textAlign:"center" }}>

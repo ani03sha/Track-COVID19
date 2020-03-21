@@ -11,6 +11,7 @@
 }
 
 .search__form input {
+    display: inline-block;
     margin: 0 auto;
     background-color: transparent;
     border: transparent;
@@ -31,6 +32,7 @@
 
 .search__form button {
 display:inline-block;
+width: 100px;
 padding:0.35em 1.2em;
 border:0.1em solid #FFFFFF;
 margin:0 0.3em 0.3em 0;

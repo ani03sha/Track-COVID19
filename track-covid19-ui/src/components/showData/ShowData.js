@@ -22,7 +22,7 @@ const ShowData = props => {
                                 <img className="articleList__image" src={item.image} alt={item.title} />
                                 <p className="articleList__title">{item.title}</p>
                                 <p className="articleList__time">{item.time}</p>
-                                <a href={item.url} target="_blank"><button>Read More..</button></a>
+                                <a href={item.url} target="_blank" rel="noopener noreferrer"><button>Read More..</button></a>
                             </div>
                             
                         </div>
