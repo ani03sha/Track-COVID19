@@ -1,4 +1,4 @@
-import React, { Component, useDebugValue } from 'react';
+import React, { Component } from 'react';
 import SearchForm from './components/searchForm/SearchForm';
 import ShowData from './components/showData/ShowData';
 import Table from './components/table/Table';
@@ -30,6 +30,7 @@ class App extends Component {
 			const URL = `https://thevirustracker.com/free-api?countryTotal=${countryCode}`;
 			const request = await fetch(URL);
 			const response = await request.json();
+			console.log(response);
 			if(response.countrydata && response.countrynewsitems) {
 				const data = response.countrydata[0];
 				const newsItems = response.countrynewsitems[0];
