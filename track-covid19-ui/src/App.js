@@ -27,13 +27,15 @@ class App extends Component {
 		const countryName = e.target.elements.countryName.value;
 		const countryCode = countryHelper(countryName)[1];
 		if (countryCode) {
-			const URL = `https://thevirustracker.com/free-api?countryTotal=${countryCode}`;
-			const request = await fetch(URL);
-			const response = await request.json();
-			console.log(response);
-			if(response.countrydata && response.countrynewsitems) {
-				const data = response.countrydata[0];
-				const newsItems = response.countrynewsitems[0];
+			const URLCountry = `https://thevirustracker.com/free-api?countryTotal=${countryCode}`;
+			const requestData = await fetch(URLCountry);
+			const responseData = await requestData.json();
+			const URLCountryNews = `https://thevirustracker.com/free-api?countryNewsTotal=${countryCode}`;
+			const requestCountryNews = await fetch(URLCountryNews);
+			const responseCountryNews = await requestCountryNews.json();
+			if(responseData.countrydata) {
+				const data = responseData.countrydata[0];
+				const newsItems = responseCountryNews.countrynewsitems[0];
 				this.setState({
 					countryName: data.info.title,
 					totalCases: data.total_cases,

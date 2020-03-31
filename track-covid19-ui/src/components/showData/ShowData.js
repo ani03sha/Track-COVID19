@@ -17,13 +17,13 @@ const ShowData = props => {
             <div className="row">
                 { jsonArray.map((item) => {
                     return(
-                        <div className="col-md-4" style={{ marginBottom: "2rem" }}>
+                        <div key={item.newsid} className="col-md-4" style={{ marginBottom: "2rem" }}>
                             <div className="card">
                                 <img className="articleList__image" src={item.image} alt={item.title} />
                                 <p className="articleList__title">{item.title}</p>
                                 <p className="articleList__time">{item.time}</p>
+                                <a href={item.url} target="__blank" rel="noopener noreferrer"><button className="articleList__buttn">Read more...</button></a>
                             </div>
-                            
                         </div>
                         );
                     })
